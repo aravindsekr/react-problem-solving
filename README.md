@@ -1,2 +1,2 @@
-# react-problem-solving
+# tryout-aws-amplify
 Created with CodeSandbox
