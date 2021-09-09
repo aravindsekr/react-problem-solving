@@ -1,5 +1,5 @@
 const divideAndMerge = (arr) => {
-  if (arr.length === 1) {
+  if (arr.length < 2) {
     //returns the sorted single item array
     return arr;
   }
@@ -15,37 +15,15 @@ const divideAndMerge = (arr) => {
 const merge = (arr1, arr2) => {
   let newArr = [];
 
-  let j = 0;
-  let i = 0;
-
-  do {
-    if (arr1[i] < arr2[j]) {
-      newArr.push(arr1[i]);
-      ++i;
+  while (arr1.length && arr2.length) {
+    if (arr1[0] <= arr2[0]) {
+      newArr.push(arr1.shift());
+    } else {
+      newArr.push(arr2.shift());
     }
-
-    if (arr1[i] === arr2[j]) {
-      newArr.push(arr1[i]);
-      newArr.push(arr2[j]);
-      ++j;
-      ++i;
-    }
-
-    if (arr1[i] > arr2[j]) {
-      newArr.push(arr2[j]);
-      ++j;
-    }
-  } while (i < arr1.length && j < arr2.length);
-
-  if (i < arr1.length) {
-    newArr.push(...arr1.slice(i, arr1.length));
   }
 
-  if (j < arr2.length) {
-    newArr.push(...arr2.slice(j, arr2.length));
-  }
-
-  return newArr;
+  return newArr.concat(arr1, arr2);
 };
 
 const MergeSort = (arr) => divideAndMerge(arr);
