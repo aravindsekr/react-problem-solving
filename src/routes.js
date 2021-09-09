@@ -2,6 +2,9 @@ import dancingNumbers from "./misc/dancing-numbers";
 import compress from "./misc/data-compression";
 import bubble from "./sort/bubble";
 import insertion from "./sort/insertion";
+import fibonacci from "./recursion/fibonacci";
+import factorial from "./recursion/factorial";
+import nestedAddition from "./recursion/nested-addition";
 
 const routes = [
   {
@@ -31,6 +34,27 @@ const routes = [
     invokeFn: insertion,
     input: [3, 4, 5, 2, 8, 1, 2, 9],
     inputDisplayValue: "3, 4, 5, 2, 8, 1, 2, 9"
+  },
+  {
+    path: "fibonacci",
+    displayName: "Recursion: fibonacci",
+    invokeFn: fibonacci,
+    input: 100,
+    inputDisplayValue: "100"
+  },
+  {
+    path: "factorial",
+    displayName: "Recursion: factorial",
+    invokeFn: factorial,
+    input: 100,
+    inputDisplayValue: "100"
+  },
+  {
+    path: "nested-addition",
+    displayName: "Recursion: nested addition",
+    invokeFn: nestedAddition,
+    input: [1, [2, [3, 4, [5], 6], 7]],
+    inputDisplayValue: "1, [ 2 , [3, 4, [5], 6], 7"
   }
 ];
 
