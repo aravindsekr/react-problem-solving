@@ -5,6 +5,7 @@ import insertion from "./sort/insertion";
 import fibonacci from "./recursion/fibonacci";
 import factorial from "./recursion/factorial";
 import nestedAddition from "./recursion/nested-addition";
+import mergeSort from "./sort/merge";
 
 const routes = [
   {
@@ -32,6 +33,13 @@ const routes = [
     path: "insertion",
     displayName: "Sorting: insertion",
     invokeFn: insertion,
+    input: [3, 4, 5, 2, 8, 1, 2, 9],
+    inputDisplayValue: "3, 4, 5, 2, 8, 1, 2, 9"
+  },
+  {
+    path: "merge-sort",
+    displayName: "Sorting: merge-sort",
+    invokeFn: mergeSort,
     input: [3, 4, 5, 2, 8, 1, 2, 9],
     inputDisplayValue: "3, 4, 5, 2, 8, 1, 2, 9"
   },
