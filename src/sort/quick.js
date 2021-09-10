@@ -1,6 +1,4 @@
 const quickSortRecursion = (arr) => {
-  window.console.log(arr);
-
   if (arr.length < 2) {
     return arr;
   }

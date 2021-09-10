@@ -7,6 +7,7 @@ import factorial from "./recursion/factorial";
 import nestedAddition from "./recursion/nested-addition";
 import quickSort from "./sort/quick";
 import mergeSort from "./sort/merge";
+import radixSort from "./sort/radix";
 
 const routes = [
   {
@@ -50,6 +51,13 @@ const routes = [
     invokeFn: mergeSort,
     input: [3, 4, 5, 2, 8, 1, 2, 9],
     inputDisplayValue: "3, 4, 5, 2, 8, 1, 2, 9"
+  },
+  {
+    path: "radix-sort",
+    displayName: "Sorting: Radix Sort",
+    invokeFn: radixSort,
+    input: [1001, 1002, 1009, 873, 99, 4566, 23],
+    inputDisplayValue: "1001, 1002, 1009, 873, 99, 4566, 23"
   },
   {
     path: "fibonacci",
