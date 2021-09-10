@@ -8,6 +8,7 @@ import nestedAddition from "./recursion/nested-addition";
 import quickSort from "./sort/quick";
 import mergeSort from "./sort/merge";
 import radixSort from "./sort/radix";
+import binarySearch from "./search/binary";
 
 const routes = [
   {
@@ -79,6 +80,13 @@ const routes = [
     invokeFn: nestedAddition,
     input: [1, [2, [3, 4, [5], 6], 7]],
     inputDisplayValue: "1, [ 2 , [3, 4, [5], 6], 7"
+  },
+  {
+    path: "binary-search",
+    displayName: "Search: binary search",
+    invokeFn: binarySearch,
+    input: "2, 3, 5, 8, 10, 100, 110 ** 823",
+    inputDisplayValue: "2, 3, 5, 8, 10, 100 ** 8"
   }
 ];
 
