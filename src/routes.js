@@ -9,6 +9,7 @@ import quickSort from "./sort/quick";
 import mergeSort from "./sort/merge";
 import radixSort from "./sort/radix";
 import binarySearch from "./search/binary";
+import bst from "./tree/bst";
 
 const routes = [
   {
@@ -87,6 +88,13 @@ const routes = [
     invokeFn: binarySearch,
     input: "2, 3, 5, 8, 10, 100, 110 ** 823",
     inputDisplayValue: "2, 3, 5, 8, 10, 100 ** 8"
+  },
+  {
+    path: "bst",
+    displayName: "Search: Binary Search Tree",
+    invokeFn: bst,
+    input: "3, 7, 5, 13, 10, 1, 2 ** 2",
+    inputDisplayValue: "[3, 7, 5, 13, 10, 1, 2]"
   }
 ];
 
