@@ -8,8 +8,9 @@ import nestedAddition from "./recursion/nested-addition";
 import quickSort from "./sort/quick";
 import mergeSort from "./sort/merge";
 import radixSort from "./sort/radix";
+import heapSort from "./sort/heap";
 import binarySearch from "./search/binary";
-import bst from "./tree/bst";
+import bst, { traverse, bfsTraverse } from "./tree/bst";
 
 const routes = [
   {
@@ -62,6 +63,13 @@ const routes = [
     inputDisplayValue: "1001, 1002, 1009, 873, 99, 4566, 23"
   },
   {
+    path: "heap-sort",
+    displayName: "Sorting: Heap Sort",
+    invokeFn: heapSort,
+    input: [1001, 1002, 1009, 873, 99, 4566, 23],
+    inputDisplayValue: "1001, 1002, 1009, 873, 99, 4566, 23"
+  },
+  {
     path: "fibonacci",
     displayName: "Recursion: fibonacci",
     invokeFn: fibonacci,
@@ -93,6 +101,20 @@ const routes = [
     path: "bst",
     displayName: "Search: Binary Search Tree",
     invokeFn: bst,
+    input: "3, 7, 5, 13, 10, 1, 2 ** 2",
+    inputDisplayValue: "[3, 7, 5, 13, 10, 1, 2]"
+  },
+  {
+    path: "bst-traversal",
+    displayName: "Search: Binary Search Tree DFS Traversal",
+    invokeFn: traverse,
+    input: "3, 7, 5, 13, 10, 1, 2 ** 2",
+    inputDisplayValue: "[3, 7, 5, 13, 10, 1, 2]"
+  },
+  {
+    path: "bfs-traversal",
+    displayName: "Search: Binary Search Tree BFS Traversal",
+    invokeFn: bfsTraverse,
     input: "3, 7, 5, 13, 10, 1, 2 ** 2",
     inputDisplayValue: "[3, 7, 5, 13, 10, 1, 2]"
   }

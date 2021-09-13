@@ -1,6 +1,9 @@
 class Tree {
   constructor() {
     this.root = null;
+    this.postArr = [];
+    this.inArr = [];
+    this.preArr = [];
   }
 
   search(value) {
@@ -55,6 +58,80 @@ class Tree {
     }
   }
 
+  preorder(node) {
+    if (node === null) {
+      return;
+    }
+
+    // process the node
+    this.preArr.push(node.value);
+    this.preorder(node.left);
+    this.preorder(node.right);
+  }
+
+  postorder(node) {
+    if (node === null) {
+      return;
+    }
+
+    this.postorder(node.left);
+    this.postorder(node.right);
+    // node will be processed last
+    this.postArr.push(node.value);
+  }
+
+  inorder(node) {
+    if (node === null) {
+      return;
+    }
+
+    this.inorder(node.left);
+    this.inArr.push(node.value);
+    this.inorder(node.right);
+  }
+
+  traverse() {
+    this.preorder(this.root);
+
+    this.inorder(this.root);
+
+    this.postorder(this.root);
+
+    return JSON.stringify({
+      preorder: this.preArr.join(", "),
+      postorder: this.postArr.join(", "),
+      inorder: this.inArr.join(", ")
+    });
+  }
+
+  bfsTraverse() {
+    let allNodes = [];
+    let currNode = this.root;
+
+    let childQueue = [currNode];
+
+    while (childQueue.length) {
+      //dequeue the first node
+      let nodeFromQueue = childQueue.shift();
+      let leftChildNode = nodeFromQueue.left;
+      let rightChildNode = nodeFromQueue.right;
+
+      //add to final list of nodes
+      allNodes.push(nodeFromQueue.value);
+
+      //add childs to queue
+      if (leftChildNode) {
+        childQueue.push(leftChildNode);
+      }
+
+      if (rightChildNode) {
+        childQueue.push(rightChildNode);
+      }
+    }
+
+    return allNodes;
+  }
+
   toObject() {
     return this.root;
   }
@@ -67,6 +144,26 @@ class Node {
     this.right = null;
   }
 }
+
+export const traverse = (str) => {
+  const input = str.split("**");
+  const arr = input[0].split(", ").map((elem) => Number(elem));
+
+  const t = new Tree();
+  arr.map((v) => t.add(v));
+
+  return t.traverse();
+};
+
+export const bfsTraverse = (str) => {
+  const input = str.split("**");
+  const arr = input[0].split(", ").map((elem) => Number(elem));
+
+  const t = new Tree();
+  arr.map((v) => t.add(v));
+
+  return t.bfsTraverse();
+};
 
 const bst = (str) => {
   const input = str.split("**");
