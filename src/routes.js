@@ -11,6 +11,8 @@ import radixSort from "./sort/radix";
 import heapSort from "./sort/heap";
 import binarySearch from "./search/binary";
 import bst, { traverse, bfsTraverse } from "./tree/bst";
+import graphTraverse from "./graph/graph";
+import pathFinding from "./graph/pathfinding";
 
 const routes = [
   {
@@ -117,6 +119,19 @@ const routes = [
     invokeFn: bfsTraverse,
     input: "3, 7, 5, 13, 10, 1, 2 ** 2",
     inputDisplayValue: "[3, 7, 5, 13, 10, 1, 2]"
+  },
+  {
+    path: "graph",
+    displayName: "graph: people with titles",
+    invokeFn: graphTraverse,
+    input: 2,
+    inputDisplayValue: "Degrees of separation: 2"
+  },
+  {
+    path: "path",
+    displayName: "graph: path finding",
+    invokeFn: pathFinding,
+    inputDisplayValue: "Distance between two points:"
   }
 ];
 
