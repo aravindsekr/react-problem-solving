@@ -13,6 +13,7 @@ import binarySearch from "./search/binary";
 import bst, { traverse, bfsTraverse } from "./tree/bst";
 import graphTraverse from "./graph/graph";
 import pathFinding from "./graph/pathfinding";
+import listAdd from "./misc/list-add";
 
 const routes = [
   {
@@ -132,6 +133,12 @@ const routes = [
     displayName: "graph: path finding",
     invokeFn: pathFinding,
     inputDisplayValue: "Distance between two points:"
+  },
+  {
+    path: "list-add",
+    displayName: "List Add",
+    invokeFn: listAdd,
+    inputDisplayValue: "Adding two linked list"
   }
 ];
 
