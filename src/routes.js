@@ -14,6 +14,7 @@ import bst, { traverse, bfsTraverse } from "./tree/bst";
 import graphTraverse from "./graph/graph";
 import pathFinding from "./graph/pathfinding";
 import listAdd from "./misc/list-add";
+import queue from "./ds/queue";
 
 const routes = [
   {
@@ -139,6 +140,12 @@ const routes = [
     displayName: "List Add",
     invokeFn: listAdd,
     inputDisplayValue: "Adding two linked list"
+  },
+  {
+    path: "queue",
+    displayName: "Queue - check console",
+    invokeFn: queue,
+    inputDisplayValue: "Basic queue operations"
   }
 ];
 
