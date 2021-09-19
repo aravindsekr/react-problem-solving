@@ -15,6 +15,8 @@ import graphTraverse from "./graph/graph";
 import pathFinding from "./graph/pathfinding";
 import listAdd from "./misc/list-add";
 import queue from "./ds/queue";
+import cycleList from "./list/circular-list";
+import checkBalance from "./tree/check-balance";
 
 const routes = [
   {
@@ -146,6 +148,18 @@ const routes = [
     displayName: "Queue - check console",
     invokeFn: queue,
     inputDisplayValue: "Basic queue operations"
+  },
+  {
+    path: "cycle-list",
+    displayName: "Cycle list - check console",
+    invokeFn: cycleList,
+    inputDisplayValue: "Find cycles"
+  },
+  {
+    path: "tree-balance",
+    displayName: "checkBalance",
+    invokeFn: checkBalance,
+    inputDisplayValue: "Check Balance"
   }
 ];
 
