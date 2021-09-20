@@ -18,6 +18,7 @@ import queue from "./ds/queue";
 import cycleList from "./list/circular-list";
 import checkBalance from "./tree/check-balance";
 import balancedBinary from "./tree/balanced-binary-tree";
+import listFromDepth from "./tree/list-from-depth";
 
 const routes = [
   {
@@ -166,6 +167,12 @@ const routes = [
     path: "balanced-binary-tree",
     displayName: "Balanced binary tree",
     invokeFn: balancedBinary,
+    inputDisplayValue: "Check Balance"
+  },
+  {
+    path: "list-from-depth",
+    displayName: "Lists from depth",
+    invokeFn: listFromDepth,
     inputDisplayValue: "Check Balance"
   }
 ];
