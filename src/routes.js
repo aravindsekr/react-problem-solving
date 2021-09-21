@@ -19,6 +19,7 @@ import cycleList from "./list/circular-list";
 import checkBalance from "./tree/check-balance";
 import balancedBinary from "./tree/balanced-binary-tree";
 import listFromDepth from "./tree/list-from-depth";
+import findSum from "./tree/find-sum";
 
 const routes = [
   {
@@ -174,6 +175,12 @@ const routes = [
     displayName: "Lists from depth",
     invokeFn: listFromDepth,
     inputDisplayValue: "Check Balance"
+  },
+  {
+    path: "find-sum",
+    displayName: "Finding sum",
+    invokeFn: findSum,
+    inputDisplayValue: "find sum"
   }
 ];
 
